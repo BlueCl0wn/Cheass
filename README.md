@@ -1,2 +1,2 @@
-# Cheass
+# Chess
 a chess game
