@@ -10,7 +10,7 @@ class square():
         self.width = 110
         self.color =(255, 255, 255)
     def draw(self):
-        pygame.draw.rect(win, color, (self.x, self.y, self.width, self.width))
+        pygame.draw.rect(win, self.color, (self.x, self.y, self.width, self.width))
 
 # 1
 A1 = square(1, 1)
