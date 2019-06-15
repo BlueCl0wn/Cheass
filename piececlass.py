@@ -1,23 +1,33 @@
 import pygame
 import instances
 import background
+from vars import *
 
 class piece():
-    def __init__(self, player, xpos, ypos, URI, moves, range):
+    def __init__(self, player, position):
         self.player = player # Boolean
 
-        self.position = position # on Chessboard, example: "B3"
+        # self.position = position # on Chessboard, example: "B3"
 
-        self.xpos = (xpos - 1) * 110 + 520
-        self.ypos = (ypos - 1) * 110 + 520
+        square = position
 
-        self.vertical = moves[0]
-        self.horizontal = moves[1]
-        self.diagonal = moves[2]
-        self.horse = moves[3]
-        self.range = range
+        self.xpos = square.x
+        self.ypos = square.y
 
-        img = pygame.image.load(URI)
+
+        # self.vertical = moves[0]
+        # self.horizontal = moves[1]
+        # self.diagonal = moves[2]
+        # self.horse = moves[3]
+        # self.range = range
+
+        # img = pygame.image.load(URI)
+
+    def select_piece(self):
+        print(self.xpos)
+
+abc = piece(1, background.B3)
+abc.select_piece()
 
 # class king(piece): # Koenig
 #     def __init__(self, m):

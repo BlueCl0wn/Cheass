@@ -3,6 +3,7 @@ import instances
 from instances import win
 from vars import *
 import background
+import piececlass
 
 pygame.init()
 
@@ -18,5 +19,6 @@ while run:
     background.background()
 
     pygame.display.update()
+
 
 pygame.quit()

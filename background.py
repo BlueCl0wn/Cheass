@@ -4,8 +4,8 @@ from vars import *
 
 class square():
     def __init__(self, x, y, color):
-        self.x = (x - 1) * 110 + x_border_distance + 40
-        self.y = (y - 1) * 110 + y_border_distance + 40
+        self.x = (x - 1) * squarewidth + x_border_distance + 40
+        self.y = (y - 1) * squarewidth + y_border_distance + 40
         self.width = 110
         self.color = color
 
