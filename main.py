@@ -4,6 +4,7 @@ from instances import win
 from vars import *
 import background
 import piececlass
+from hover import hover
 
 pygame.init()
 
@@ -17,6 +18,8 @@ while run:
             run = False
 
     background.background()
+
+    hover()
 
     pygame.display.update()
 

@@ -10,22 +10,22 @@ class piece():
         self.ypos = (ypos - 1) * 110 + 520
         img = pygame.image.load(URI)
 
-class king(piece): # Koenig
-    def __init__(self):
-        self.character = farmer
-
-class queen(piece): # Dame
-    def __init__(self):
-        self.character = farmer
-
-class rook(piece): # Turm
-    def __init__(self):
-        self.character = farmer
-
-class knight(piece): # Springer
-    def __init__(self):
-        self.character = farmer
-
-class pawn(piece): # Bauer
-    def __init__(self):
-        self.character = farmer
+# class king(piece): # Koenig
+#     def __init__(self):
+#         self.character = farmer
+#
+# class queen(piece): # Dame
+#     def __init__(self):
+#         self.character = farmer
+#
+# class rook(piece): # Turm
+#     def __init__(self):
+#         self.character = farmer
+#
+# class knight(piece): # Springer
+#     def __init__(self):
+#         self.character = farmer
+#
+# class pawn(piece): # Bauer
+#     def __init__(self):
+#         self.character = farmer

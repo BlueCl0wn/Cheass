@@ -1,7 +1,7 @@
 import pygame
 from squareclass import square
 from vars import *
-from instances import *
+from instances import win
 
 # 1
 A1 = square(1, 1, WHITE)
