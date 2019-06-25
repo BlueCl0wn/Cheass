@@ -3,10 +3,18 @@ import instances
 from instances import win
 from vars import *
 import background
-import piececlass
 from hover import hover
+from background import squares
 
 pygame.init()
+
+def select():
+    pos = pygame.mouse.get_pos()
+    x, y  = pos[0], pos[1]
+    button1 = pygame.mouse.get_pressed()[0]
+
+    for piece in pieces:
+        square.hover()
 
 run = True
 while run:
@@ -19,7 +27,7 @@ while run:
 
     background.background()
 
-    hover()
+    select()
 
     pygame.display.update()
 

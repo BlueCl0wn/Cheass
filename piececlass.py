@@ -13,6 +13,7 @@ class piece():
 
         self.xpos = square.x
         self.ypos = square.y
+        self.selected = False
 
 
         # self.vertical = moves[0]
@@ -22,12 +23,21 @@ class piece():
         # self.range = range
 
         # img = pygame.image.load(URI)
+    def hover():
+            # tests if cursor is on the square
+            if x >= (square.x) and x <= (square.x2) and y >= square.y and y <= square.y2:
+                # square is surrounded with grey rectangle
+                pygame.draw.rect(win, (130, 130, 130), (square.x, square.y, squarewidth, squarewidth), 5)
+
+                # tests if piece is chosen
+                if button1 == True:
+                    self.selected = True
+
+            else:
+                pass
 
     def select_piece(self):
         print(self.xpos)
-
-abc = piece(1, background.B3)
-abc.select_piece()
 
 # class king(piece): # Koenig
 #     def __init__(self, m):
