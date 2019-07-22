@@ -5,16 +5,19 @@ from vars import *
 import background
 from hover import hover
 from background import squares
+from pieces import pieces
 
 pygame.init()
 
-# def select():
-#     pos = pygame.mouse.get_pos()
-#     x, y  = pos[0], pos[1]
-#     button1 = pygame.mouse.get_pressed()[0]
-#
-#     for piece in pieces:
-#         square.hover()
+def select():
+    pos = pygame.mouse.get_pos()
+    x, y  = pos[0], pos[1]
+    button1 = pygame.mouse.get_pressed()[0]
+
+    for piece in pieces:
+        piece.draw(x, y)
+        piece.hover(x, y, button1)
+
 
 run = True
 while run:
@@ -26,9 +29,9 @@ while run:
             run = False
     background.background()
 
-    # select()
+    select()
 
-    hover()
+    # hover()
 
     pygame.display.update()
 

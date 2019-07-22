@@ -2,20 +2,23 @@ import pygame
 import instances
 import background
 from vars import *
+from instances import win
+from pieces import pieces
 
 class piece():
     def __init__(self, player, position):
         self.player = player # Boolean
-
         # self.position = position # on Chessboard, example: "B3"
 
-        square = position
 
-        self.xpos = square[0]
-        self.ypos = square.[1]
+        self.xpos = (position[0]  - 1) * 110 + 520
+        self.ypos = (position[1] - 1) * 110 + 100
         self.selected = False
 
-        self.moves = moves # ex. [[self.xpos + 1, self.ypos - 1], [self.xpos + 1], [self.xpos + 1, self.ypos + 1]]
+        self.color = (255, 0, 0) # später weg!!!!!
+        # self.img =
+
+        # self.moves = moves # ex. [[self.xpos + 1, self.ypos - 1], [self.xpos + 1], [self.xpos + 1, self.ypos + <1]]
 
 
         # self.vertical = moves[0]
@@ -25,15 +28,23 @@ class piece():
         # self.range = range
 
         # img = pygame.image.load(URI)
-    def hover():
+
+    def draw(self, x, y):
+        pygame.draw.rect(win, self.color, (self.xpos, self.ypos,  60, 60))
+
+    def hover(self, x, y, button1):
             # tests if cursor is on the square
-            if x >= (square.x) and x <= (square.x2) and y >= square.y and y <= square.y2:
+            if x >= (self.xpos) and x <= (self.xpos + 109) and y >= (self.ypos) and y <= (self.ypos + 109):
                 # square is surrounded with grey rectangle
-                pygame.draw.rect(win, (130, 130, 130), (square.x, square.y, squarewidth, squarewidth), 5)
+                pygame.draw.rect(win, (130, 130, 130), (self.xpos, self.ypos, squarewidth, squarewidth), 5)
 
                 # tests if piece is chosen
                 if button1 == True:
+                    for piece in pieces:
+                        piece.selected = False
+                        piece.color = (255, 0, 0)
                     self.selected = True
+                    self.color = (0, 255, 0)
 
             else:
                 pass
