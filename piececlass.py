@@ -11,9 +11,11 @@ class piece():
 
         square = position
 
-        self.xpos = square.x
-        self.ypos = square.y
+        self.xpos = square[0]
+        self.ypos = square.[1]
         self.selected = False
+
+        self.moves = moves # ex. [[self.xpos + 1, self.ypos - 1], [self.xpos + 1], [self.xpos + 1, self.ypos + 1]]
 
 
         # self.vertical = moves[0]
