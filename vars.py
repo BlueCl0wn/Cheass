@@ -14,3 +14,5 @@ x_border_distance = (screenwidth - 960) / 2
 y_border_distance = (screenheight  - 960) / 2
 
 squarewidth = 110
+
+player = 0
