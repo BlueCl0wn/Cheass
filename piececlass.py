@@ -33,4 +33,4 @@ class piece():
 
     def moving(self):
         if self.selected = True:
-            pass
+            pass 
